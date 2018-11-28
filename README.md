@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-# Install
+# Install from PyPi via pip
 pip install cijoe-pkg-liblightnvm
 ```
 
