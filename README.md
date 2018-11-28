@@ -2,24 +2,46 @@
 
 ## Installation
 
+Install:
+
 ```bash
-# Install from PyPi via pip
 pip install cijoe-pkg-liblightnvm
 ```
 
-## Usage
+## Create environment definition for CIJOE
 
 Run CIJOE interactively and define the target environment:
 
-```
+```bash
 # Start cijoe
 cijoe
 
-# Copy refenv-definition to use as template, modify according to you environment
+# Use refence definitions as a template for defining your environment
 cat $CIJ_ENVS/refenv-u1604.sh > target_env.sh
-cat $CIJ_ENVS/refenv-liblightnvm >> target_env.sh
+tail -n +2 $CIJ_ENVS/refenv-liblightnvm.sh >> target_env.sh
+
+# Open up your favorite editor and modify accordingly
 vim target_env.sh
 ```
+
+## Create virtual environment definition for CIJOE
+
+Run CIJOE interactively and define the target environment:
+
+```bash
+# Start cijoe
+cijoe
+
+# Use refence definitions as a template for defining your environment
+cat $CIJ_ENVS/refenv-u1604.sh > target_env.sh
+tail -n +2 $CIJ_ENVS/qemu.sh >> target_env.sh
+tail -n +2 $CIJ_ENVS/refenv-liblightnvm.sh >> target_env.sh
+
+# Open up your favorite editor and modify accordingly
+vim target_env.sh
+```
+
+## Running tests
 
 Start the test-runner and view the report:
 
@@ -30,7 +52,7 @@ RESULTS=$(mktemp -d trun.XXXXXX -p /tmp)
 # Run using the testplan for Open-Channel 2.0 devices
 cij_runner \
     $CIJ_TESTPLANS/OCSSD_S20.plan \
-    target_env.sh
+    target_env.sh \
     --output $RESULTS
 
 # Create test report
