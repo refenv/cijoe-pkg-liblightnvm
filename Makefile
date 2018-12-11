@@ -12,6 +12,11 @@ uninstall:
 dev: uninstall install
 	@echo -n "# dev: "; date
 
+.PHONY: bump
+bump:
+	@echo "# Bumping '${PROJECT_VERSION}' to '${NEXT_VERSION}'"
+	@sed -i -e s/"version=\".*\""/"version=\"${NEXT_VERSION}\""/g setup.py
+
 .PHONY: clean
 clean:
 	rm -r build
