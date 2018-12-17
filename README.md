@@ -51,7 +51,7 @@ RESULTS=$(mktemp -d trun.XXXXXX -p /tmp)
 
 # Run using the testplan for Open-Channel 2.0 devices
 cij_runner \
-    $CIJ_TESTPLANS/OCSSD_S20.plan \
+    $CIJ_TESTPLANS/OCSSD_S20_IOCTL.plan \
     target_env.sh \
     --output $RESULTS
 
