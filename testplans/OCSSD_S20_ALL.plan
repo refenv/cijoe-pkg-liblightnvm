@@ -1,6 +1,6 @@
 descr: liblightnvm testplan for Open-Channel 2.0 devices
 descr_long: |
-  Run the liblightnvm test-suites using the different library backends
+  Run the liblightnvm test-suites using all the different library backends
 hooks: [ sysinf, dmesg ]
 testsuites:
   - name: OCSSD
