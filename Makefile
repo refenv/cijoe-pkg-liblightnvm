@@ -1,4 +1,10 @@
 PROJECT_NAME=cijoe-pkg-liblightnvm
+PROJECT_VERSION_MAJOR=$(shell grep -oP 'version=\"(\K[0-9\.]+)' setup.py | cut -d "." -f 1)
+PROJECT_VERSION_MINOR=$(shell grep -oP 'version=\"(\K[0-9\.]+)' setup.py | cut -d "." -f 2)
+PROJECT_VERSION_PATCH=$(shell grep -oP 'version=\"(\K[0-9\.]+)' setup.py | cut -d "." -f 3)
+PROJECT_VERSION=${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERSION_PATCH}
+NEXT_VERSION_PATCH=$$((${PROJECT_VERSION_PATCH} + 1))
+NEXT_VERSION=${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${NEXT_VERSION_PATCH}
 
 .PHONY: install
 install:
