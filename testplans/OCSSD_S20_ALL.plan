@@ -3,13 +3,13 @@ descr_long: |
   Run the liblightnvm test-suites using all the different library backends
 hooks: [ sysinf, dmesg ]
 testsuites:
-  - name: OCSSD
+  - name: OCSSD_SXX
     alias: "OCSSD via IOCTL"
     evars: { NVM_CLI_BE_ID: 1 }
-  - name: OCSSD
+  - name: OCSSD_SXX
     alias: "OCSSD via Linux Block Device"
     evars: { NVM_CLI_BE_ID: 2 }
-  - name: OCSSD
+  - name: OCSSD_SXX
     alias: "OCSSD via SPDK"
     evars: { NVM_CLI_BE_ID: 4 }
     hooks: ["spdk"]

@@ -1,8 +1,9 @@
 #!/bin/bash
 #
-# Verify liblightnvm -- OCSSD 1.2/2.0 identify -- via `nvm_dev info`
+# Verify OCSSD 2.0 GLP-CI via `nvm_cmd rprt_all`
 #
-# This is super simply check that it the device is able to identify
+# And that the environment has defined NVM_DEV_IDENT identifying the device to
+# use for testing
 #
 # shellcheck disable=SC2119
 #
@@ -12,7 +13,7 @@ export CIJ_TEST_NAME
 source "$CIJ_ROOT/modules/cijoe.sh"
 test::enter
 
-if ! ssh::cmd "NVM_CLI_BE_ID=$NVM_CLI_BE_ID nvm_dev info $NVM_DEV_IDENT"; then
+if ! ssh::cmd "NVM_CLI_BE_ID=$NVM_CLI_BE_ID nvm_cmd rprt_all $NVM_DEV_IDENT"; then
   test::fail
 fi
 

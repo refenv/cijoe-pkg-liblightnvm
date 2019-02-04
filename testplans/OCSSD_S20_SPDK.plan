@@ -4,7 +4,7 @@ descr_long: |
 hooks: [ sysinf, dmesg, spdk ]
 evars: { NVM_CLI_BE_ID: 4, HUGEMEM: 8192 }
 testsuites:
-  - name: OCSSD
+  - name: OCSSD_SXX
     alias: "OCSSD via SPDK"
   - name: OCSSD_S20
     alias: "OCSSD 2.0 via SPDK"

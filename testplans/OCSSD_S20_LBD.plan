@@ -4,7 +4,7 @@ descr_long: |
 hooks: [ sysinf, dmesg ]
 evars: { NVM_CLI_BE_ID: 2 }
 testsuites:
-  - name: OCSSD
+  - name: OCSSD_SXX
     alias: "OCSSD via Linux Block Device"
   - name: OCSSD_S20
     alias: "OCSSD 2.0 via Linux Block Device"

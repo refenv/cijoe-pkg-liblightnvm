@@ -3,11 +3,11 @@ descr_long: |
   Run the liblightnvm test-suites using the different library backends
 hooks: [ sysinf, dmesg ]
 testsuites:
-  - name: OCSSD
+  - name: OCSSD_SXX
     evars: { NVM_CLI_BE_ID: 1 }
-  - name: OCSSD
+  - name: OCSSD_SXX
     evars: { NVM_CLI_BE_ID: 2 }
-  - name: OCSSD
+  - name: OCSSD_SXX
     evars: { NVM_CLI_BE_ID: 4 }
   - name: OCSSD_S12
     evars: { NVM_CLI_BE_ID: 1 }
