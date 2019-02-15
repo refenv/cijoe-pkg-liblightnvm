@@ -2,7 +2,9 @@ descr: liblightnvm testplan for non OCCSD devices via SPDK/PROXY
 descr_long: |
   Run the liblightnvm test-suites using the SPDK backend
 hooks: [ sysinf, dmesg, spdk ]
-evars: { NVM_CLI_BE_ID: 8, HUGEMEM: 8192 }
+evars: { NVM_BE: "NVM_BE_PROXY", HUGEMEM: 8192 }
 testsuites:
   - name: OCSSD_000
-    alias: "OCSSD via SPDK"
+    alias: "OCSSD via SPDK/PROXY"
+  - name: OCSSD_SXX
+    alias: "OCSSD via SPDK/PROXY"

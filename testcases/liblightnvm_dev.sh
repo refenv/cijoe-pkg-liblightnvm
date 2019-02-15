@@ -12,7 +12,7 @@ export CIJ_TEST_NAME
 source "$CIJ_ROOT/modules/cijoe.sh"
 test::enter
 
-if ! ssh::cmd "NVM_CLI_BE_ID=$NVM_CLI_BE_ID nvm_dev info $NVM_DEV_IDENT"; then
+if ! ssh::cmd "NVM_BE=$NVM_BE nvm_dev info $NVM_DEV_IDENT"; then
   test::fail
 fi
 
