@@ -10,12 +10,13 @@ setup(
     url="https://github.com/safl/cijoe-pkg-liblightnvm",
     license="BSD-2",
     install_requires=[
-        "cijoe (>=0.0.9)"
+        "cijoe (>=0.0.12)"
     ],
     zip_safe=False,
     data_files=[
          ("share/cijoe/envs", glob.glob("envs/*")),
 
+         ("share/cijoe/testfiles", glob.glob("testfiles/*")),
          ("share/cijoe/testcases", glob.glob("testcases/*")),
          ("share/cijoe/testsuites", glob.glob("testsuites/*")),
          ("share/cijoe/testplans", glob.glob("testplans/*"))
