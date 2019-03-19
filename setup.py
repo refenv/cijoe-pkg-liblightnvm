@@ -3,7 +3,7 @@ import glob
 
 setup(
     name="cijoe-pkg-liblightnvm",
-    version="0.0.5",
+    version="0.0.6",
     description="CIJOE liblightnvm Package",
     author="Simon A. F. Lund",
     author_email="slund@cnexlabs.com",
