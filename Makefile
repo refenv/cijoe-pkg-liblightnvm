@@ -6,9 +6,15 @@ PROJECT_VERSION=${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${PROJECT_VERS
 NEXT_VERSION_PATCH=$$((${PROJECT_VERSION_PATCH} + 1))
 NEXT_VERSION=${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}.${NEXT_VERSION_PATCH}
 
+INSTALL_OPTS?=
+
+.PHONY: user
+user:
+	$(eval INSTALL_OPTS := --user)
+
 .PHONY: install
 install:
-	pip install . --user
+	pip install . $(INSTALL_OPTS)
 
 .PHONY: uninstall
 uninstall:
@@ -38,5 +44,5 @@ release-upload:
 	twine upload dist/*
 
 .PHONY: release
-release: release-build release-upload
+release: clean release-build release-upload
 	@echo -n "# rel: "; date
