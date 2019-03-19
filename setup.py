@@ -10,7 +10,7 @@ setup(
     url="https://github.com/safl/cijoe-pkg-liblightnvm",
     license="BSD-2",
     install_requires=[
-        "cijoe (>=0.0.12)"
+        "cijoe (>=0.0.13)"
     ],
     zip_safe=False,
     data_files=[
