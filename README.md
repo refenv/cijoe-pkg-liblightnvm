@@ -1,8 +1,8 @@
-# cijoe-pkg-liblightnvm - Collection of test cases suites and plans
+# cijoe-pkg-liblightnvm - Collection of testcases, suites and plans
 
 ## Installation
 
-Install:
+The package is distributed via PyPi, run the following to command to install:
 
 ```bash
 pip install cijoe-pkg-liblightnvm
@@ -34,7 +34,11 @@ cijoe
 
 # Use refence definitions as a template for defining your environment
 cat $CIJ_ENVS/refenv-u1604.sh > target_env.sh
+
+# The following is the qemu variables to define
 tail -n +2 $CIJ_ENVS/qemu.sh >> target_env.sh
+
+# Lastly, the variables used by liblightnvm testcases
 tail -n +2 $CIJ_ENVS/refenv-liblightnvm.sh >> target_env.sh
 
 # Open up your favorite editor and modify accordingly
