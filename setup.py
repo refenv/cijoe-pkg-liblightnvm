@@ -3,14 +3,14 @@ import glob
 
 setup(
     name="cijoe-pkg-liblightnvm",
-    version="0.0.7",
+    version="0.0.8",
     description="CIJOE liblightnvm Package",
     author="Simon A. F. Lund",
     author_email="slund@cnexlabs.com",
     url="https://github.com/safl/cijoe-pkg-liblightnvm",
     license="BSD-2",
     install_requires=[
-        "cijoe (>=0.0.13)"
+        "cijoe (>=0.0.14)"
     ],
     zip_safe=False,
     data_files=[
