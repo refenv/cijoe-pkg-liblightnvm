@@ -4,17 +4,17 @@ descr_long: |
 hooks: [ sysinf, dmesg ]
 testsuites:
   - name: OCSSD_SXX
-    evars: { NVM_CLI_BE_ID: 1 }
+    evars: { NVM_BE: "NVM_BE_IOCTL" }
   - name: OCSSD_SXX
-    evars: { NVM_CLI_BE_ID: 2 }
+    evars: { NVM_BE: "NVM_BE_LBD" }
   - name: OCSSD_SXX
-    evars: { NVM_CLI_BE_ID: 4 }
+    evars: { NVM_BE: "NVM_BE_SPDK" }
   - name: OCSSD_S12
-    evars: { NVM_CLI_BE_ID: 1 }
+    evars: { NVM_BE: "NVM_BE_IOCTL" }
     hooks: ["spdk"]
   - name: OCSSD_S12
-    evars: { NVM_CLI_BE_ID: 2 }
+    evars: { NVM_BE: "NVM_BE_LBD" }
     hooks: ["spdk"]
   - name: OCSSD_S12
-    evars: { NVM_CLI_BE_ID: 4 }
+    evars: { NVM_BE: "NVM_BE_SPDK" }
     hooks: ["spdk"]
