@@ -29,10 +29,10 @@ install:
 - make install
 
 script:
-- shellcheck envs/*.sh
-- shellcheck testcases/*.sh
-- pylint setup.py
-- CIJ_ROOT=$(cij_root) cij_tlint
+- make selftest
+
+after_script:
+- find selftest_results -name "*.log" -exec cat {} \;
 
 deploy:
   provider: pypi
