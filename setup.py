@@ -6,7 +6,7 @@ from setuptools import setup
 
 setup(
     name="cijoe-pkg-liblightnvm",
-    version="0.0.8",
+    version="0.0.9",
     description="CIJOE: liblightnvm package",
     author="Simon A. F. Lund",
     author_email="slund@cnexlabs.com",
