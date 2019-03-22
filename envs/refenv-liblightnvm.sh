@@ -12,19 +12,19 @@
 # liblightnvm; set NVM_DEV_IDENT
 case $NVM_BE in
 NVM_BE_IOCTL)
-  : ${NVM_DEV_IDENT:="/dev/$NVME_DEV_NAME"}
+  : "${NVM_DEV_IDENT:=/dev/$NVME_DEV_NAME}"
   export NVM_DEV_IDENT
   ;;
 NVM_BE_LBD)
-  : ${NVM_DEV_IDENT:="/dev/$NVME_DEV_NAME"}
+  : "${NVM_DEV_IDENT:=/dev/$NVME_DEV_NAME}"
   export NVM_DEV_IDENT
   ;;
 NVM_BE_SPDK)
-  : ${NVM_DEV_IDENT:="traddr:$PCI_DEV_NAME"}
+  : "${NVM_DEV_IDENT:="traddr:$PCI_DEV_NAME"}"
   export NVM_DEV_IDENT
   ;;
 NVM_BE_NOCD)
-  : ${NVM_DEV_IDENT:="traddr:$PCI_DEV_NAME"}
+  : "${NVM_DEV_IDENT:="traddr:$PCI_DEV_NAME"}"
   export NVM_DEV_IDENT
   ;;
 esac
