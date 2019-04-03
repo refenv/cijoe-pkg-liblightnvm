@@ -26,7 +26,7 @@ setup(
     url="https://github.com/safl/cijoe-pkg-liblightnvm",
     license="Apache License 2.0",
     install_requires=[
-        "cijoe (=0.0.18)"
+        "cijoe (==0.0.19)"
     ],
     zip_safe=False,
     data_files=[
