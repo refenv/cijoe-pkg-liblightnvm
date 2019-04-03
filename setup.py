@@ -18,7 +18,7 @@ def read(*parts):
 
 setup(
     name="cijoe-pkg-liblightnvm",
-    version="0.0.9",
+    version="0.0.10",
     description="CIJOE: liblightnvm package",
     long_description=read('README.rst'),
     author="Simon A. F. Lund",
@@ -26,7 +26,7 @@ setup(
     url="https://github.com/safl/cijoe-pkg-liblightnvm",
     license="Apache License 2.0",
     install_requires=[
-        "cijoe (==0.0.19)"
+        "cijoe (==0.0.20)"
     ],
     zip_safe=False,
     data_files=[
