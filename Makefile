@@ -21,7 +21,7 @@ uninstall:
 	pip uninstall ${PROJECT_NAME} --yes || true
 
 .PHONY: dev
-dev: uninstall install
+dev: uninstall install selftest-view
 	@echo -n "# dev: "; date
 
 .PHONY: bump
@@ -31,8 +31,8 @@ bump:
 
 .PHONY: clean
 clean:
-	rm -r build
-	rm -r dist
+	@rm -r build || true
+	@rm -r dist || true
 
 .PHONY: release-build
 release-build:
@@ -46,3 +46,13 @@ release-upload:
 .PHONY: release
 release: clean release-build release-upload
 	@echo -n "# rel: "; date
+
+.PHONY: selftest
+selftest:
+	@rm -r selftest_results || true
+	./selftest.sh 1 0 selftest_results
+
+.PHONY: selftest-view
+selftest-view:
+	@rm -r selftest_results || true
+	./selftest.sh 1 1 selftest_results
