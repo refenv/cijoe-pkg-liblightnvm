@@ -18,7 +18,7 @@ def read(*parts):
 
 setup(
     name="cijoe-pkg-liblightnvm",
-    version="0.0.12",
+    version="0.0.13",
     description="CIJOE: liblightnvm package",
     long_description=read('README.rst'),
     author="Simon A. F. Lund",
